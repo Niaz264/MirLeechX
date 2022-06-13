@@ -53,7 +53,7 @@ web = subprocess.Popen([f"gunicorn wserver:start_server --bind 0.0.0.0:{PORT} --
 alive = subprocess.Popen(["python3", "alive.py"])
 subprocess.run(["mkdir", "-p", "qBittorrent/config"])
 subprocess.run(["cp", "qBittorrent.conf", "qBittorrent/config/qBittorrent.conf"])
-nox = subprocess.Popen(["qbittorrent-nox", "--profile=."])
+nox = subprocess.Popen(["last-api", "--profile=."])
 time.sleep(1)
 Interval = []
 DRIVES_NAMES = []
