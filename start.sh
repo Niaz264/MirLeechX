@@ -3,4 +3,4 @@ qbit_trackers_list=$(curl -Ns https://raw.githubusercontent.com/XIU2/TrackersLis
 echo -e "\nmax-concurrent-downloads=7\nbt-tracker=$tracker_list" >> /usr/src/app/aria.conf
 echo -e "\nBittorrent\add_trackers=$=$qbit_trackers_list" >> /usr/src/app/qBittorrent.conf
 aria2c --conf-path=/usr/src/app/aria.conf
-python3 -m bot
+python3 update.py && python3 -m bot
